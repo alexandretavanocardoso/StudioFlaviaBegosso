@@ -1,0 +1,9 @@
+@import './variables';
+
+@mixin flexPrincipal($justifyContent) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center;
+
+    flex-wrap: wrap;
+}

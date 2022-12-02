@@ -1,0 +1,107 @@
+@import '../../../scss/_variables.scss';
+@import '../../../scss/_mixins.scss';
+
+// principal
+.mg-top {
+    margin-top: $marginTop50;
+}
+
+.flex {
+    @include flexPrincipal(center);
+
+    .title-default {
+        text-align: center;
+        text-decoration: underline;
+        
+        margin-bottom: 35px;
+    
+        font-size: 30px;
+        color: $colorPinkDefault;
+    }
+}
+
+// img
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: $borderRadius8;
+}
+
+// content
+.divContent {
+    h3 {
+        font-weight: bold;
+        font-size: 30px;
+        color: $colorblackDefault;
+    }
+
+    p {
+        padding-top: 12px;
+        
+        font-size: 17px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+    }
+
+    .flexButton {
+        @include flexPrincipal(space-around);
+
+        padding-top: 20px;
+
+        a {
+            padding: 8px 20px;
+
+            width: 160px;
+            height: 40px;
+
+            border-radius: $borderRadius8;
+            border: none;
+            
+            text-align: center;
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .instagram {
+            background: #125688;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: #125688;
+
+                border: 2px solid #125688;
+            }
+        }
+
+        .tiktok {
+            background: #000;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: #000;
+
+                border: 2px solid #000;
+            }
+        }
+
+        .youtube {
+            background: #bb0000;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: #bb0000;
+
+                border: 2px solid #bb0000;
+            }
+        }
+    }
+}
