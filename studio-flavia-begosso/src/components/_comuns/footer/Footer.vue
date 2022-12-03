@@ -1,5 +1,5 @@
 <template>
-    <a href="https://web.whatsapp.com/send?phone=5514998749060&text=Bom%20dia!" class="btn-whatsApp" target="_blank">
+    <a href="https://web.whatsapp.com/send?phone=5514991729539&text=Bom%20dia!" class="btn-whatsApp" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
     <!-- <footer id="footer"></footer> -->

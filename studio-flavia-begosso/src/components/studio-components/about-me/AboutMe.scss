@@ -22,8 +22,8 @@
 
 // img
 img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 
     border-radius: $borderRadius8;
@@ -101,6 +101,18 @@ img {
                 color: #bb0000;
 
                 border: 2px solid #bb0000;
+            }
+        }
+
+        .facebook{
+            background: #2374e1;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: #2374e1;
+
+                border: 2px solid #2374e1;
             }
         }
     }

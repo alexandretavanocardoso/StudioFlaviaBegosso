@@ -1,5 +1,7 @@
 <template>
-    <div></div>
+    <div class="mg-top">
+        <h3 class="title-default">GALERIA</h3>
+    </div>
 </template>
 
 <script>

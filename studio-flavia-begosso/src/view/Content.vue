@@ -8,16 +8,18 @@
 import AboutMeComponent from '@/components/studio-components/about-me/AboutMe.vue'
 import AllWorksComponent from '@/components/studio-components/all-works/AllWorks.vue'
 import ContactComponent from '@/components/studio-components/contact/Contact.vue'
+import GalleryComponent from '@/components/studio-components/gallery/Gallery.vue'
 
 export default {
     name: 'ContentComponent',
     data: () => ({
-        navigatePage: 'ContactComponent'
+        navigatePage: 'GalleryComponent'
     }),
     components: {
         AboutMeComponent,
         AllWorksComponent,
-        ContactComponent
+        ContactComponent,
+        GalleryComponent
     }
 }
 </script>
