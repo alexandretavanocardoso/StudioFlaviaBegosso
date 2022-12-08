@@ -1,0 +1,11 @@
+@import '../../../scss/_variables.scss';
+
+.navbar {
+    background-color: $colorPinkDefault;
+}
+
+.nav-link{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}

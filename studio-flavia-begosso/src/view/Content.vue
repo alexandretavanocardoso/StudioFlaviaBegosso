@@ -13,7 +13,7 @@ import GalleryComponent from '@/components/studio-components/gallery/Gallery.vue
 export default {
     name: 'ContentComponent',
     data: () => ({
-        navigatePage: 'GalleryComponent'
+        navigatePage: 'ContactComponent'
     }),
     components: {
         AboutMeComponent,

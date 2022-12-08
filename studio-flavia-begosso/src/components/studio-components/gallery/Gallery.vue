@@ -1,14 +1,18 @@
 <template>
     <div class="mg-top">
-        <h3 class="title-default">GALERIA</h3>
+        <GalleryListComponent></GalleryListComponent>
     </div>
 </template>
 
 <script>
+import GalleryListComponent from '@/components/studio-components/_sub-studio-components/litsComponents/galleryList/GalleryList.vue'
+
 export default {
-    name: 'GalleryComponent'
+    name: 'GalleryComponent',
+    components: {
+        GalleryListComponent
+    }
 }
 </script>
-
 
 <style src="./Gallery.scss" lang="scss" scoped></style>

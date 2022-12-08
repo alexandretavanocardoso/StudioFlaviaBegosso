@@ -6,16 +6,6 @@
     margin-top: $marginTop50;
 }
 
-.title-default {
-    text-align: center;
-    text-decoration: underline;
-
-    margin-bottom: 35px;
-
-    font-size: 30px;
-    color: $colorPinkDefault;
-}
-
 .flex {
     @include flexPrincipal(space-around);
 }

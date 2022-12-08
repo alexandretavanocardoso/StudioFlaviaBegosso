@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="row mg-top flex">
-            <h3 class="title-default">QUEM SOU EU</h3>
             <div class="col-md-6 flex">
                 <img src="@/assets/img/photoAbout.jpg" alt="StudioFlaviaBegosso">
             </div>
@@ -30,8 +29,6 @@
                             class="bi bi-tiktok"></i> Tiktok</a>
                     <a href="https://www.facebook.com/StudioFlaviaBegosso" class="facebook" target="_blank"><i
                             class="bi bi-facebook"></i> Facebook</a>
-                    <!-- <a href="https://www.youtube.com/@flaviabegosso7042" class="youtube" target="_blank"><i
-                            class="bi bi-youtube"></i> Youtube</a> -->
                 </div>
             </div>
         </div>

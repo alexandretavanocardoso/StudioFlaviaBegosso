@@ -5,16 +5,6 @@
     margin-top: $marginTop80;
 }
 
-.title-default {
-    text-align: center;
-    text-decoration: underline;
-    
-    margin-bottom: 35px;
-
-    font-size: 30px;
-    color: $colorPinkDefault;
-}
-
 .flex {
     @include flexPrincipal(space-evenly);
 }

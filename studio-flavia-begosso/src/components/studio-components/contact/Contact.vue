@@ -1,6 +1,5 @@
 <template>
     <div class="mg-top">
-        <h3 class="title-default">CONTATO</h3>
         <div class="flex row">
             <div class="col-md-4" v-for="(contact, index) in contacts" :key="index">
                 <div class="card">

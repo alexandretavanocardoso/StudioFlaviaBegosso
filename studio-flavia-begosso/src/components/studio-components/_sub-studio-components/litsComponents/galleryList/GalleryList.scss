@@ -1,0 +1,17 @@
+@import '../../../../../scss/_variables.scss';
+@import '../../../../../scss/_mixins.scss';
+
+.flex{
+    @include flexPrincipal(space-evenly);
+}
+
+img {
+    width: 330px;
+    height: 250px;
+
+    object-fit: cover;
+
+    margin-top: $marginTop12;
+
+    border-radius: 12px;
+}

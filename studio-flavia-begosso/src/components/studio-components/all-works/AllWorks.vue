@@ -1,6 +1,5 @@
 <template>
     <div class="mg-top">
-        <h3 class="title-default">EXTENSÃO DE CÍLIOS</h3>
         <div class="flex">
             <WorkListComponent></WorkListComponent>
         </div>

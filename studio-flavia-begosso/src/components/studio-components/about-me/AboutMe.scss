@@ -8,16 +8,6 @@
 
 .flex {
     @include flexPrincipal(center);
-
-    .title-default {
-        text-align: center;
-        text-decoration: underline;
-        
-        margin-bottom: 35px;
-    
-        font-size: 30px;
-        color: $colorPinkDefault;
-    }
 }
 
 // img

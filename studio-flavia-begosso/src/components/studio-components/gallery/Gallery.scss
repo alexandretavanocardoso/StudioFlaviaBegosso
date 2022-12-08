@@ -1,17 +1,6 @@
 @import '../../../scss/_variables.scss';
 @import '../../../scss/_mixins.scss';
 
-// principal
 .mg-top {
     margin-top: $marginTop50;
-}
-
-.title-default {
-    text-align: center;
-    text-decoration: underline;
-
-    margin-bottom: 35px;
-
-    font-size: 30px;
-    color: $colorPinkDefault;
 }
