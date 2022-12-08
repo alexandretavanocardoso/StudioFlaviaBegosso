@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">LOGO</a>
+                <router-link @click="RenderizeValueHeader2('Página Inicial')" aria-current="page" class="navbar-brand" :to="{path: '/'}">LOGO</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -11,22 +11,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Página Inicial')" class="nav-link" aria-current="page" href="#">Página Inical</a>
+                            <router-link @click="RenderizeValueHeader2('Página Inicial')" aria-current="page" class="nav-link" :to="{path: '/'}">Página Inical</router-link>
                         </li>
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Quem Sou Eu')" class="nav-link" aria-current="page" href="#">Quem Sou Eu</a>
+                            <router-link @click="RenderizeValueHeader2('Quem Sou Eu')" aria-current="page" class="nav-link" :to="{path: '/sobre'}">Quem Sou Eu</router-link>
                         </li>
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Serviços')" class="nav-link" aria-current="page" href="#">Serviços</a>
+                            <router-link @click="RenderizeValueHeader2('Serviços')" aria-current="page" class="nav-link" :to="{path: '/serviços'}">Serviços</router-link>
                         </li>
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Galeria')" class="nav-link" aria-current="page" href="#">Galeria</a>
+                            <router-link @click="RenderizeValueHeader2('Galeria')" aria-current="page" class="nav-link" :to="{path: '/galeria'}">Galeria</router-link>
                         </li>
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Contato')" class="nav-link" aria-current="page" href="#">Contato</a>
+                            <router-link @click="RenderizeValueHeader2('Contato')" aria-current="page" class="nav-link" :to="{path: '/contato'}">Contato</router-link>
                         </li>
                         <li class="nav-item">
-                            <a @click="RenderizeValueHeader2('Blog')" class="nav-link" aria-current="page" href="#">Blog</a>
+                            <router-link @click="RenderizeValueHeader2('Blog')" aria-current="page" class="nav-link" :to="{path: '/blog'}">Blog</router-link>
                         </li>
                     </ul>
                 </div>

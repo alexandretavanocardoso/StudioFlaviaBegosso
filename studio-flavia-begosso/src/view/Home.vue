@@ -1,6 +1,6 @@
 <template>
     <div>
-        a
+        CHAMAR TODOS COMPONENTES e estilizar fundo
     </div>
 </template>
 
