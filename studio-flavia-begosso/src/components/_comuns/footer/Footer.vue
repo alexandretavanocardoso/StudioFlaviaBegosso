@@ -17,7 +17,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="@/assets/img/photoAbout.jpg" alt="">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="@/assets/img/photoAbout.jpg" alt="">
+                        COPYRIGHT © 2022 STUDIO FLAVIA BEGOSSO – TODOS OS DIREITOS RESERVADOS.
+                    </div>
                 </div>
                 <div class="col-md-4 address">
                     <p class="title">Endereço</p>

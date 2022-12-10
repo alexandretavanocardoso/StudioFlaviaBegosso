@@ -22,7 +22,7 @@ export default {
     Header2Component
   },
   data: () => ({
-    titlePageApp: "Página Inicial"
+    titlePageApp: "BEM VINDO AO STUDIO FLAVIA BEGOSSO"
   }),
   mounted() {
     this.emitter.on('titlePageEmit', (page) => {
