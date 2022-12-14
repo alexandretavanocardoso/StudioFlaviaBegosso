@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\studioFlaviaBegosso.Domain\StudioFlaviaBegosso.Domain.csproj" />
+    <ProjectReference Include="..\studioFlaviaBegosso.Infra\StudioFlaviaBegosso.Infra.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\.editorconfig" />
+  </ItemGroup>
+
+</Project>

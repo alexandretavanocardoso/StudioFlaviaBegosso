@@ -1,0 +1,5 @@
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\obj\Debug\net6.0\StudioFlaviaBegosso.Business.csproj.AssemblyReference.cache
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\obj\Debug\net6.0\StudioFlaviaBegosso.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\obj\Debug\net6.0\StudioFlaviaBegosso.Business.AssemblyInfoInputs.cache
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\obj\Debug\net6.0\StudioFlaviaBegosso.Business.AssemblyInfo.cs
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegossoAPI\studioFlaviaBegosso.API\studioFlaviaBegosso.Business\obj\Debug\net6.0\StudioFlaviaBegosso.Business.csproj.CoreCompileInputs.cache
