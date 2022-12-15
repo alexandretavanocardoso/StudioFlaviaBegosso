@@ -567,11 +567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
       "projectName": "StudioFlaviaBegosso.Domain",
-      "projectPath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
+      "projectPath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
       "packagesPath": "C:\\Users\\tavan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\obj\\",
+      "outputPath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tavan\\AppData\\Roaming\\NuGet\\NuGet.Config",

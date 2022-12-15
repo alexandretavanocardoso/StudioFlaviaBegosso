@@ -2,7 +2,8 @@
     <div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <router-link @click="RenderizeValueHeader2('Bem vindo ao Studio Flavia Begosso')" aria-current="page" class="navbar-brand" :to="{path: '/'}">LOGO</router-link>
+                <router-link @click="RenderizeValueHeader2('Bem vindo ao Studio Flavia Begosso')" aria-current="page"
+                    class="navbar-brand" :to="{path: '/'}">LOGO</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -11,25 +12,36 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Bem vindo ao Studio Flavia Begosso')" aria-current="page" class="nav-link" :to="{path: '/'}">Página Inical</router-link>
+                            <router-link exact-active-class="nav-link-active"
+                                @click="RenderizeValueHeader2('Bem vindo ao Studio Flavia Begosso')" aria-current="page"
+                                class="nav-link" :to="{ path: '/' }">Página Inical</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Quem Sou Eu')" aria-current="page" class="nav-link" :to="{path: '/sobre'}">Quem Sou Eu</router-link>
+                            <router-link exact-active-class="nav-link-active"
+                                @click="RenderizeValueHeader2('Quem Sou Eu')" aria-current="page" class="nav-link"
+                                :to="{ path: '/sobre' }">Quem Sou Eu</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Serviços')" aria-current="page" class="nav-link" :to="{path: '/serviços'}">Serviços</router-link>
+                            <router-link exact-active-class="nav-link-active" @click="RenderizeValueHeader2('Serviços')"
+                                aria-current="page" class="nav-link" :to="{ path: '/serviços' }">Serviços</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Galeria')" aria-current="page" class="nav-link" :to="{path: '/galeria'}">Galeria</router-link>
+                            <router-link exact-active-class="nav-link-active" @click="RenderizeValueHeader2('Galeria')"
+                                aria-current="page" class="nav-link" :to="{ path: '/galeria' }">Galeria</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Contato')" aria-current="page" class="nav-link" :to="{path: '/contato'}">Contato</router-link>
+                            <router-link exact-active-class="nav-link-active" @click="RenderizeValueHeader2('Contato')"
+                                aria-current="page" class="nav-link" :to="{ path: '/contato' }">Contato</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Blog')" aria-current="page" class="nav-link" :to="{path: '/blog'}">Blog</router-link>
+                            <router-link exact-active-class="nav-link-active" @click="RenderizeValueHeader2('Blog')"
+                                aria-current="page" class="nav-link" :to="{ path: '/blog' }">Blog</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link @click="RenderizeValueHeader2('Perguntas Frequentes')" aria-current="page" class="nav-link" :to="{path: '/perguntas-frequentes'}">Perguntas Frequentes</router-link>
+                            <router-link exact-active-class="nav-link-active"
+                                @click="RenderizeValueHeader2('Perguntas Frequentes')" aria-current="page"
+                                class="nav-link" :to="{ path: '/perguntas-frequentes' }">Perguntas
+                                Frequentes</router-link>
                         </li>
                     </ul>
                 </div>
@@ -49,4 +61,6 @@ export default {
 }
 </script>
 
-<style src="./Header.scss" lang="scss" scoped></style>
+<style src="./Header.scss" lang="scss" scoped>
+
+</style>

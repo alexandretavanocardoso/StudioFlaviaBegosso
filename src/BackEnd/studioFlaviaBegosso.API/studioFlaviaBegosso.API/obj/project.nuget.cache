@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UGj8rUqB8kVkO5LnyY0Yxen9XZsHMzxBclnKUXKLKPLDhX8zAr4n4/SAdfixX1/n/EX/tGVG9ZmMAVsz2QNyDg==",
+  "dgSpecHash": "z8zB7ZVbVz1Cqi3WXkckuhaavGbMzfyiLjhycQ5XAXnCAp4+4z3QnP/R3Td6nbrt7P/ZUdPJZSWnhClKQMoeIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.API\\StudioFlaviaBegosso.API.csproj",
+  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.API\\StudioFlaviaBegosso.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tavan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

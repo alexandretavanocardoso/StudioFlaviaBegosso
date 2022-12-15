@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cer+V97dSBFnrzT2y3USB858VgMf3EFAMpUvDcPcNECUJGNSbbF5GkOdPHCRtQkrExpqDuJp/8vC6uKztUW7Sw==",
+  "dgSpecHash": "NV6VdQJ2z0MQfvJtAS2vER5+cPRsN8uLhkYA4SV+YabKQsWnjIwl/HHKPwRRePy0utZ3qxYUREAIsXe606le9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Infra\\StudioFlaviaBegosso.Infra.csproj",
+  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Infra\\StudioFlaviaBegosso.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tavan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.1\\microsoft.entityframeworkcore.7.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v0MDZKjCWZ3FzELOK+XxJJV5hjgKhE0Cs5sbU5EOIcqeaLb9rcySdoXUTc0SqcSmziPlMB+kCqWVt8D6t4oB7w==",
+  "dgSpecHash": "8tcARY22g7m9aJrR+GEUhLxaCX+V8WIjOwyraKf6ARc/bQ695q++WP1DuDMsRB6WueTRMJy1169qlpHFgp6hxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegossoAPI\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
+  "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\studioFlaviaBegosso.API\\studioFlaviaBegosso.Domain\\StudioFlaviaBegosso.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tavan\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.1\\microsoft.entityframeworkcore.7.0.1.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.1\\microsoft.entityframeworkcore.abstractions.7.0.1.nupkg.sha512",

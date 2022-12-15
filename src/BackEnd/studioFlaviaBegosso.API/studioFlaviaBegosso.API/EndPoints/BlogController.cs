@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudioFlaviaBegosso.Domain.Interface.Service;
+using StudioFlaviaBegosso.Domain.Model;
+using StudioFlaviaBegosso.Domain.Response;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Blog;
 
@@ -13,30 +15,18 @@ public class BlogController : ControllerBase
         _blogService = blogService;
     }
 
-    [HttpGet("get-all-blog")]
-    public IEnumerable<string> getAllBlog()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    //[HttpGet("get-all-blog")]
+    //public async Task<ActionResult<IEnumerable<BlogModel>>> getAllBlog() => await _blogService.GetAllBlogAsync();
 
     [HttpGet("get-blog/{id:Guid}")]
-    public string GetBlog(Guid id)
-    {
-        return "value";
-    }
+    public async Task<ActionResult<BlogModel>> GetBlog(Guid id) => await _blogService.GetBlogAsync(id);
 
     [HttpPost("insert-blog")]
-    public void InsertBlog([FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<ResponseRequest>> InsertBlog([FromBody] string value) => await _blogService.InsertBlogAsync(value);
 
     [HttpPut("update-blog/{id:Guid}")]
-    public void UpdateBlog(Guid id, [FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<ResponseRequest>> UpdateBlog(Guid id, [FromBody] string value) => await _blogService.UpdateBlogAsync(id, value);
 
     [HttpDelete("delete-blog/{id:Guid}")]
-    public void DeleteBlog(Guid id)
-    {
-    }
+    public async Task<ActionResult<ResponseRequest>> DeleteBlog(Guid id) => await _blogService.DeleteBlogAsync(id);
 }
