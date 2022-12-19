@@ -7,11 +7,16 @@ import AboutMeComponent from '@/components/studio-components/about-me/AboutMe.vu
 import BlogComponent from '@/components/studio-components/blog/Blog.vue'
 import QuestionsFrequentComponent from '@/components/studio-components/questions-frequents/Questions-frequents.vue'
 import HomeComponent from '@/view/Home.vue'
+import NotFoundComponent from '@/components/_comuns/notFound/notFound.vue'
 
 const routes = [
     {
         path: "/",
         component: HomeComponent
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        component: NotFoundComponent
     },
     {
         path: "/galeria",
