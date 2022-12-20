@@ -1,6 +1,9 @@
 <template>
-    <img src="@/assets/img/cilios.png" />
-    <h4>404</h4>
+    <div class="flex">
+        <h4>Desculpe, esta página não está disponível.</h4>
+        <p>O link que você seguiu pode estar quebrado ou a página pode ter sido removida.</p>
+        <img src="@/assets/img/cilios.jpg" />
+    </div>
 </template> 
 
 <script>
@@ -9,4 +12,6 @@ export default {
 }
 </script>
 
-<style src="./notFound.scss" lang="scss" scoped></style>
+<style src="./notFound.scss" lang="scss" scoped>
+
+</style>
