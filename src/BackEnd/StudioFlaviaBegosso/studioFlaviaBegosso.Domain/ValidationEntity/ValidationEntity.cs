@@ -8,8 +8,6 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
         #region[OnModelCreating]
         public static ModelBuilder ValidationEntitys(this ModelBuilder modelBuilder)
         {
-            //modelBuilder.Ignore<Notification>();
-
             ValidationQuestionFrequent(modelBuilder);
             ValidationGallery(modelBuilder);
             ValidationWork(modelBuilder);

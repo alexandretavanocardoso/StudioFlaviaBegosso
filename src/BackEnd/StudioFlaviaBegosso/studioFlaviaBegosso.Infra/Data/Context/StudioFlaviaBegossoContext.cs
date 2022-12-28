@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Domain.ValidationEntity;
 
 namespace StudioFlaviaBegosso.Infra.Data.Context;
 
-public class StudioFlaviaBegossoContext : DbContext
+public class StudioFlaviaBegossoContext : IdentityDbContext<IdentityUser>
 {
     public StudioFlaviaBegossoContext(DbContextOptions<StudioFlaviaBegossoContext> context) : base(context)
     {
@@ -17,7 +19,10 @@ public class StudioFlaviaBegossoContext : DbContext
     public DbSet<BlogModel> Blogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-        => modelBuilder.ValidationEntitys();
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ValidationEntitys();
+    }
 
     protected override void ConfigureConventions(ModelConfigurationBuilder modelConfigurationBuilder)
         => modelConfigurationBuilder.ConfigurationEntitys();
