@@ -769,7 +769,9 @@
       },
       "studioFlaviaBegosso.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.1"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.12",
+          "Microsoft.EntityFrameworkCore": "7.0.1",
+          "Microsoft.Extensions.Identity.Core": "6.0.12"
         },
         "runtime": {
           "studioFlaviaBegosso.Domain.dll": {}

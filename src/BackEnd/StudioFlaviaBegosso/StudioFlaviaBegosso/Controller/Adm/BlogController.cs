@@ -6,7 +6,7 @@ namespace StudioFlaviaBegosso.API.EndPoints.Adm;
 
 [ApiController]
 [Route("api/adm/[controller]")]
-[Authorize]
+[Authorize(Policy = "AdminPolicy")]
 public class BlogController : ControllerBase
 {
     private readonly IBlogService _blogService;

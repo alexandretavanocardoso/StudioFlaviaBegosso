@@ -5,8 +5,8 @@ using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
 
 [Route("api/adm/[controller]")]
-[Authorize]
 [ApiController]
+[Authorize(Policy = "AdminPolicy")]
 public class QuestionFrequentController : ControllerBase
 {
     private readonly IQuestionFrequentService _questionFrequentService;
