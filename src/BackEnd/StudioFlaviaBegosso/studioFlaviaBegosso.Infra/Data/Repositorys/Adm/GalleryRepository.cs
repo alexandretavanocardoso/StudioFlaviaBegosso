@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using studioFlaviaBegosso.Infra.Data.Repositorys;
+﻿using studioFlaviaBegosso.Infra.Data.Repositorys;
 using StudioFlaviaBegosso.Domain.Interface.Repository.Adm;
 using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
@@ -8,12 +7,7 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
 {
     public class GalleryRepository : BaseRepository<GalleryModel>, IGalleryRepository
     {
-        private readonly DbSet<GalleryModel> _dataSet;
-
-        public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext)
-        {
-            _dataSet = studioFlaviaBegossoContext.Set<GalleryModel>();
-        }
+        public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
         public async Task<List<GalleryModel>> GetAllGallery()
         {

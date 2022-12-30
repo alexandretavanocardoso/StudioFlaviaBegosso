@@ -12,6 +12,7 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
             ValidationGallery(modelBuilder);
             ValidationWork(modelBuilder);
             ValidationBlog(modelBuilder);
+            ValidationEmail(modelBuilder);
 
             return modelBuilder;
         }
@@ -66,6 +67,11 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
             modelBuilder.Entity<QuestionFrequentModel>()
                 .Property(p => p.Description)
                 .IsRequired();
+        }
+
+        private static void ValidationEmail(ModelBuilder modelBuilder)
+        {
+
         }
         #endregion[OnModelCreating]
 

@@ -19,20 +19,14 @@ public class GalleryService : IGalleryService
 
     public async Task<List<GalleryDto>> GetAllGalleryAsync()
     {
-        List<GalleryDto> dto = new List<GalleryDto>();
         List<GalleryModel> model = await _galleryRepository.GetAllGallery();
-
-        dto = _mapper.Map<List<GalleryDto>>(model);
-        return dto;
+        return _mapper.Map<List<GalleryDto>>(model);
     }
 
     public async Task<GalleryDto> GetGalleryAsync(Guid id)
     {
-        GalleryDto dto = new GalleryDto();
         GalleryModel model = await _galleryRepository.GetGallery(id);
-
-        dto = _mapper.Map<GalleryDto>(model);
-        return dto;
+        return _mapper.Map<GalleryDto>(model);
     }
 
     public async Task<bool> InsertGalleryAsync(GalleryDto galleryDto)

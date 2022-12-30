@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
@@ -12,34 +13,28 @@ public class QuestionFrequentController : ControllerBase
 {
     private readonly IQuestionFrequentService _questionFrequentService;
 
-    public QuestionFrequentController(IQuestionFrequentService questionFrequentService) {
+    public QuestionFrequentController(IQuestionFrequentService questionFrequentService)
+    {
         _questionFrequentService = questionFrequentService;
     }
 
     [HttpGet("get-list")]
-    public IEnumerable<string> getAllQuestionFrequent()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    public async Task<ActionResult<List<QuestionFrequentDto>>> GetAllQuestionFrequent()
+        => await _questionFrequentService.GetAllQuestionFrequentAsync();
 
     [HttpGet("get/{id:Guid}")]
-    public string GetQuestionFrequent(Guid id)
-    {
-        return "value";
-    }
+    public async Task<ActionResult<QuestionFrequentDto>> GetQuestionFrequent(Guid id)
+        => await _questionFrequentService.GetQuestionFrequentAsync(id);
 
     [HttpPost("insert-question-frequent")]
-    public void InsertQuestionFrequent([FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> InsertQuestionFrequent([FromBody] QuestionFrequentDto questionFrequent)
+        => await _questionFrequentService.InsertQuestionFrequentAsync(questionFrequent);
 
     [HttpPut("update-question-frequent/{id:Guid}")]
-    public void UpdateQuestionFrequent(Guid id, [FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> UpdateQuestionFrequent(Guid id, [FromBody] QuestionFrequentDto questionFrequent)
+        => await _questionFrequentService.UpdateQuestionFrequentAsync(id, questionFrequent);
 
     [HttpDelete("delete-question-frequent/{id:Guid}")]
-    public void DeleteQuestionFrequent(Guid id)
-    {
-    }
+    public async Task<ActionResult<bool>> DeleteQuestionFrequent(Guid id)
+        => await _questionFrequentService.DeleteQuestionFrequentAsync(id);
 }

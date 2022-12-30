@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using studioFlaviaBegosso.Infra.Data.Repositorys;
+﻿using studioFlaviaBegosso.Infra.Data.Repositorys;
 using StudioFlaviaBegosso.Domain.Interface.Repository.Adm;
 using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
@@ -8,12 +7,7 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm;
 
 public class BlogRepository : BaseRepository<BlogModel>, IBlogRepository
 {
-    private readonly DbSet<BlogModel> _dataSet;
-
-    public BlogRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext)
-	{
-        _dataSet = studioFlaviaBegossoContext.Set<BlogModel>();
-    }
+    public BlogRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
     public async Task<List<BlogModel>> GetAllBlogAsync()
     {

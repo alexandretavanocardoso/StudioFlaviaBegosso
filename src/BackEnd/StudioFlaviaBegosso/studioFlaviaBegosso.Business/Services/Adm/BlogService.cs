@@ -19,20 +19,14 @@ public class BlogService : IBlogService
 
     public async Task<List<BlogDto>> GetAllBlogAsync()
     {
-        List<BlogDto> lstblog = new List<BlogDto>();
         List<BlogModel> blogModel = await _blogRepository.GetAllBlogAsync();
-
-        lstblog = _mapper.Map<List<BlogDto>>(blogModel);
-        return lstblog;
+        return _mapper.Map<List<BlogDto>>(blogModel);
     }
 
     public async Task<BlogDto> GetBlogAsync(Guid id)
     {
-        BlogDto blog = new BlogDto();
         BlogModel blogModel = await _blogRepository.GetBlogAsync(id);
-
-        blog = _mapper.Map<BlogDto>(blogModel);
-        return blog;
+        return _mapper.Map<BlogDto>(blogModel);
     }
 
     public async Task<bool> InsertBlogAsync(BlogDto blogRequet)

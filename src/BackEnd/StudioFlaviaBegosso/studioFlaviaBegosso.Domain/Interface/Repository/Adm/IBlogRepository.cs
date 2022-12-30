@@ -1,5 +1,4 @@
-﻿using studioFlaviaBegosso.Domain.Dto;
-using StudioFlaviaBegosso.Domain.Model;
+﻿using StudioFlaviaBegosso.Domain.Model;
 
 namespace StudioFlaviaBegosso.Domain.Interface.Repository.Adm;
 public interface IBlogRepository

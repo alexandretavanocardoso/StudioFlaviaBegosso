@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using studioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Domain.ValidationEntity;
 
@@ -17,6 +18,7 @@ public class StudioFlaviaBegossoContext : IdentityDbContext<IdentityUser>
     public DbSet<GalleryModel> Gallerys { get; set; }
     public DbSet<WorkModel> Works { get; set; }
     public DbSet<BlogModel> Blogs { get; set; }
+    public DbSet<EmailModel> Emails { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

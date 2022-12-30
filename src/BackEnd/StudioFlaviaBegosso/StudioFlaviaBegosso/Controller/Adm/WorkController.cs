@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
@@ -17,29 +18,22 @@ public class WorkController : ControllerBase
     }
 
     [HttpGet("get-list")]
-    public IEnumerable<string> getAllWork()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    public async Task<ActionResult<List<WorkDto>>> GetAllWork()
+        => await _workService.GetAllWorkAsync();
 
     [HttpGet("get/{id:Guid}")]
-    public string GetWork(Guid id)
-    {
-        return "value";
-    }
+    public async Task<ActionResult<WorkDto>> GetWork(Guid id)
+        => await _workService.GetWorkAsync(id);
 
     [HttpPost("insert-work")]
-    public void InsertWork([FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> InsertWork([FromBody] WorkDto work)
+        => await _workService.InsertWorkAsync(work);
 
     [HttpPut("update-work/{id:Guid}")]
-    public void UpdateWork(Guid id, [FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> UpdateWork(Guid id, [FromBody] WorkDto work)
+        => await _workService.UpdateWorkAsync(id, work);
 
     [HttpDelete("delete-work/{id:Guid}")]
-    public void DeleteWork(Guid id)
-    {
-    }
+    public async Task<ActionResult<bool>> DeleteWork(Guid id)
+        => await _workService.DeleteWorkAsync(id);
 }
