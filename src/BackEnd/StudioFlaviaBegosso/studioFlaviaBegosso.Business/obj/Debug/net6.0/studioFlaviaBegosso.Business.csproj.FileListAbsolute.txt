@@ -9,6 +9,7 @@ C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\Studio
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\studioFlaviaBegosso.Business.runtimeconfig.json
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\studioFlaviaBegosso.Business.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\studioFlaviaBegosso.Business.pdb
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\Dapper.dll

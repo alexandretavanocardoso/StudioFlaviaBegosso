@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
-using StudioFlaviaBegosso.Domain.Request.Authentication;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -13,21 +13,21 @@ public class TokenService : ITokenService
 {
     private readonly IConfiguration _configuration;
 
-    public TokenService() { }
+    public TokenService(IConfiguration configuration) { _configuration = configuration; }
 
-    public string GenerateTokenAsync(AuthenticationRequest authentication, UserManager<IdentityUser> userManager)
+    public async Task<string> GenerateTokenAsync(AuthenticationDto authentication, UserManager<IdentityUser> userManager)
     {
-        IdentityUser user = userManager.FindByEmailAsync(authentication.Email).Result;
-        if (user == null) return "";
+        IdentityUser user = await userManager.FindByEmailAsync(authentication.Email);
+        if (user == null)
+            return string.Empty;
 
         if (!userManager.CheckPasswordAsync(user, authentication.Password).Result) 
-            return "";
+            return string.Empty;
 
         return GerarToken(user, authentication, userManager);
     }
 
-
-    private string GerarToken(IdentityUser user, AuthenticationRequest authentication, UserManager<IdentityUser> userManager)
+    private string GerarToken(IdentityUser user, AuthenticationDto authentication, UserManager<IdentityUser> userManager)
     {
         IList<Claim> claim = userManager.GetClaimsAsync(user).Result;
         ClaimsIdentity subject = new ClaimsIdentity(new Claim[]

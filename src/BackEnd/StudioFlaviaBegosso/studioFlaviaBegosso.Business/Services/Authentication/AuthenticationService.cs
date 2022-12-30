@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
-using StudioFlaviaBegosso.Domain.Request.Authentication;
 using System.Security.Claims;
 
 namespace StudioFlaviaBegosso.Business.Services.Authentication;
@@ -9,7 +9,7 @@ public class AuthenticationService : IAuthenticationService
 {
     public AuthenticationService() {}
 
-    public bool InsertUserAsync(AuthenticationRequest authentication, UserManager<IdentityUser> userManager)
+    public async Task<bool> InsertUserAsync(AuthenticationDto authentication, UserManager<IdentityUser> userManager)
     {
         IdentityUser user = new IdentityUser()
         {
@@ -17,10 +17,10 @@ public class AuthenticationService : IAuthenticationService
             UserName = authentication.Email
         };
 
-        IdentityResult result = userManager.CreateAsync(user, authentication.Password).Result;
+        IdentityResult result = await userManager.CreateAsync(user, authentication.Password);
         if(!result.Succeeded) return false;
 
-        IdentityResult claim = userManager.AddClaimAsync(user, new Claim("AdminClaim", user.Email)).Result;
+        IdentityResult claim = await userManager.AddClaimAsync(user, new Claim("AdminClaim", user.Email));
         if (!claim.Succeeded) return false;
 
         return true;

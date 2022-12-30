@@ -3,7 +3,8 @@ using studioFlaviaBegosso.Domain.Interface.Service.Users;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Users;
 
-[Route("api/user/[controller]")]
+[Route("api/v1/[controller]")]
+[ApiExplorerSettings(IgnoreApi = false)]
 [ApiController]
 public class WorkController : ControllerBase
 {

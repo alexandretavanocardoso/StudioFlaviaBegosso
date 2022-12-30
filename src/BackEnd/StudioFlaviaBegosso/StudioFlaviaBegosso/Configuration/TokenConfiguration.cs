@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
-using StudioFlaviaBegosso.Infra.Data.Context;
 using System.Text;
 
 namespace StudioFlaviaBegosso.Configuration
@@ -34,12 +32,6 @@ namespace StudioFlaviaBegosso.Configuration
                     ClockSkew = TimeSpan.Zero
                 };
             });
-        }
-
-        public static void UseToken(this WebApplication app)
-        {
-            app.UseAuthentication();
-            app.UseAuthorization();
         }
     }
 }

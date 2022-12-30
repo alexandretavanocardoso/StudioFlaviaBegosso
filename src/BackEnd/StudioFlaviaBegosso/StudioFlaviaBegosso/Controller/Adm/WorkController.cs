@@ -4,7 +4,8 @@ using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
 
-[Route("api/adm/[controller]")]
+[Route("api/v1/adm/[controller]")]
+[ApiExplorerSettings(IgnoreApi = false)]
 [ApiController]
 [Authorize(Policy = "AdminPolicy")]
 public class WorkController : ControllerBase

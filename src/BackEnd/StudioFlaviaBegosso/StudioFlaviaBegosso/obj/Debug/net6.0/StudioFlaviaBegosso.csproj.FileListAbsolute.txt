@@ -14,6 +14,8 @@ C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\Studio
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\StudioFlaviaBegosso.runtimeconfig.json
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\StudioFlaviaBegosso.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\StudioFlaviaBegosso.pdb
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Dapper.dll
@@ -21,6 +23,7 @@ C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\Studio
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\StudioFlaviaBegosso\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll

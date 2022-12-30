@@ -12,8 +12,8 @@ using StudioFlaviaBegosso.Infra.Data.Context;
 namespace studioFlaviaBegosso.Infra.Migrations
 {
     [DbContext(typeof(StudioFlaviaBegossoContext))]
-    [Migration("20221226235214_TablesIdentity")]
-    partial class TablesIdentity
+    [Migration("20221229164714_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

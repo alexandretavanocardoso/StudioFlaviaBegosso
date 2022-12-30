@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
-using StudioFlaviaBegosso.Domain.Request.Authentication;
 
 namespace StudioFlaviaBegosso.EndPoints.Authentication
 {
-    [Route("api/authentication/[controller]")]
+    [Route("api/v1/[controller]")]
+    [ApiExplorerSettings(IgnoreApi = false)]
     [ApiController]
     public class TokenController : ControllerBase
     {
         private readonly ITokenService _tokenService;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public TokenController(ITokenService tokenService)
+        public TokenController(ITokenService tokenService, UserManager<IdentityUser> userManager)
         {
             _tokenService = tokenService;
+            _userManager = userManager;
         }
 
         [HttpPost("generate-token")]
-        public IResult GenerateToken(AuthenticationRequest authentication, UserManager<IdentityUser> userManager)
+        public async Task<ActionResult> GenerateToken([FromBody] AuthenticationDto authentication)
         {
-            string auth = _tokenService.GenerateTokenAsync(authentication, userManager);
-            if (string.IsNullOrEmpty(auth))
-                return Results.BadRequest("Autenticação invalida");
+            string token = await _tokenService.GenerateTokenAsync(authentication, _userManager);
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Autenticação invalida");
 
-            return Results.Created("Sucesso!", true);
+            return Created("Token", "TOKEN: " + token);
         }
     }
 }

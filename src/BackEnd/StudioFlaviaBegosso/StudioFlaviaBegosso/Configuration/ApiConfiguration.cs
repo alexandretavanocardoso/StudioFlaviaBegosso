@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using StudioFlaviaBegosso.Configuration;
-using StudioFlaviaBegosso.Extension;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace StudioFlaviaBegosso.API.Configuration
@@ -14,19 +13,27 @@ namespace StudioFlaviaBegosso.API.Configuration
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<StudioFlaviaBegossoContext>();
 
             services.AddToken(builder);
-            services.AddSwagger();
-            services.AddExtensionsServices();
-            services.AddExtensionsRepositorys();
+            services.AddAutoMapper(typeof(AutoMapperConfiguration).Assembly);
         }
 
-        public static void AddApiConfiguration(this WebApplication app)
+        public static void UseApiConfiguration(this WebApplication app)
         {
             if (app.Environment.IsDevelopment())
-                app.UseSwaggerConfiguration();
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("../swagger/v1/swagger.json", "Studio Flavia Begosso v1");
+                });
+            }
+
+            app.MapControllers();
 
             app.UseHttpsRedirection();
+            app.UseRouting();
 
-            app.UseToken();
+            app.UseAuthentication();
+            app.UseAuthorization();
         }
     }
 }

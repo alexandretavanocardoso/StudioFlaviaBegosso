@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
-using StudioFlaviaBegosso.Domain.Request.Authentication;
 
 namespace StudioFlaviaBegosso.EndPoints.Authentication
 {
-    [Route("api/authentication/[controller]")]
+    [Route("api/v1/[controller]")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthenticationService _authenticationService;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public AuthenticationController(IAuthenticationService authenticationService)
+        public AuthenticationController(IAuthenticationService authenticationService, UserManager<IdentityUser> userManager)
         {
             _authenticationService = authenticationService;
+            _userManager = userManager;
         }
 
         [HttpPost("insert-user")]
-        public IResult InsertUser(AuthenticationRequest authentication, UserManager<IdentityUser> userManager)
+        public async Task<ActionResult<bool>> InsertUser([FromBody] AuthenticationDto authentication)
         {
-            bool auth = _authenticationService.InsertUserAsync(authentication, userManager);
+            bool auth = await _authenticationService.InsertUserAsync(authentication, _userManager);
             if (!auth)
-                return Results.BadRequest("Autenticação invalida");
+                return BadRequest("Autenticação invalida");
 
-            return Results.Created("Sucesso!", true);
+            return Created("Sucesso!", true);
         }
     }
 }

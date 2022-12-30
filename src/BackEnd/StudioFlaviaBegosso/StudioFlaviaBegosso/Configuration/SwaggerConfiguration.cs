@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 
 namespace StudioFlaviaBegosso.Configuration
 {
@@ -38,15 +40,6 @@ namespace StudioFlaviaBegosso.Configuration
                     }
                 });
             });
-        }
-
-        public static void UseSwaggerConfiguration(this WebApplication app)
-        {
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
         }
     }
 }

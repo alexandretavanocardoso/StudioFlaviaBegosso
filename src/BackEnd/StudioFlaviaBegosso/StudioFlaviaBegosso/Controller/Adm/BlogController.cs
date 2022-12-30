@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
 
+[Route("api/v1/adm/[controller]")]
+[ApiExplorerSettings(IgnoreApi = true)]
 [ApiController]
-[Route("api/adm/[controller]")]
 [Authorize(Policy = "AdminPolicy")]
 public class BlogController : ControllerBase
 {
@@ -16,29 +18,22 @@ public class BlogController : ControllerBase
     }
 
     [HttpGet("get-list")]
-    public IEnumerable<string> getAllBlog()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    public async Task<ActionResult<List<BlogDto>>> GetAllBlog() 
+        => await _blogService.GetAllBlogAsync();
 
     [HttpGet("get/{id:Guid}")]
-    public string GetBlog(Guid id)
-    {
-        return "value";
-    }
+    public async Task<ActionResult<BlogDto>> GetBlog(Guid id) 
+        => await _blogService.GetBlogAsync(id);
 
     [HttpPost("insert-blog")]
-    public void InsertBlog([FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> InsertBlog([FromBody] BlogDto blogRequet) 
+        => await _blogService.InsertBlogAsync(blogRequet);
 
     [HttpPut("update-blog/{id:Guid}")]
-    public void UpdateBlog(Guid id, [FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> UpdateBlog(Guid id, [FromBody] BlogDto blogRequet) 
+        => await _blogService.UpdateBlogAsync(id, blogRequet);
 
     [HttpDelete("delete-blog/{id:Guid}")]
-    public void DeleteBlog(Guid id)
-    {
-    }
+    public async Task<ActionResult<bool>> DeleteBlog(Guid id) 
+        => await _blogService.DeleteBlogAsync(id);
 }

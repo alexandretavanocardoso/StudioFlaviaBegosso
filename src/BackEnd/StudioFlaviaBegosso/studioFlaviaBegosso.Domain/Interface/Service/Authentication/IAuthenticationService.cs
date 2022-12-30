@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using StudioFlaviaBegosso.Domain.Request.Authentication;
+using studioFlaviaBegosso.Domain.Dto.Authentication;
 
 namespace StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
 
 public interface IAuthenticationService
 {
-    bool InsertUserAsync(AuthenticationRequest authentication, UserManager<IdentityUser> userManager);
+    Task<bool> InsertUserAsync(AuthenticationDto authentication, UserManager<IdentityUser> userManager);
 }

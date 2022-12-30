@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;
 
-[Route("api/adm/[controller]")]
+[Route("api/v1/adm/[controller]")]
+[ApiExplorerSettings(IgnoreApi = true)]
 [ApiController]
 [Authorize(Policy = "AdminPolicy")]
 public class GalleryController : ControllerBase
@@ -16,29 +18,22 @@ public class GalleryController : ControllerBase
     }
 
     [HttpGet("get-list")]
-    public IEnumerable<string> getAllGallery()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    public async Task<ActionResult<List<GalleryDto>>> getAllGallery()
+        => await _galleryService.GetAllGalleryAsync();
 
     [HttpGet("get/{id:Guid}")]
-    public string GetGallery(Guid id)
-    {
-        return "value";
-    }
+    public async Task<ActionResult<GalleryDto>> GetGallery(Guid id)
+        => await _galleryService.GetGalleryAsync(id);
 
     [HttpPost("insert-gallery")]
-    public void InsertGallery([FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> InsertGallery([FromBody] GalleryDto galleryDto)
+        => await _galleryService.InsertGalleryAsync(galleryDto);
 
     [HttpPut("update-gallery/{id:Guid}")]
-    public void UpdateGallery(Guid id, [FromBody] string value)
-    {
-    }
+    public async Task<ActionResult<bool>> UpdateGallery(Guid id, [FromBody] GalleryDto galleryDto)
+        => await _galleryService.UpdateGalleryAsync(id, galleryDto);
 
     [HttpDelete("delete-gallery/{id:Guid}")]
-    public void DeleteGallery(Guid id)
-    {
-    }
+    public async Task<ActionResult<bool>> DeleteGallery(Guid id)
+        => await _galleryService.DeleteGalleryAsync(id);
 }
