@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using studioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Domain.Model;
 
 namespace StudioFlaviaBegosso.Domain.ValidationEntity
@@ -8,10 +9,10 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
         #region[OnModelCreating]
         public static ModelBuilder ValidationEntitys(this ModelBuilder modelBuilder)
         {
-            ValidationQuestionFrequent(modelBuilder);
-            ValidationGallery(modelBuilder);
-            ValidationWork(modelBuilder);
             ValidationBlog(modelBuilder);
+            ValidationWork(modelBuilder);
+            ValidationGallery(modelBuilder);
+            ValidationQuestionFrequent(modelBuilder);
             ValidationEmail(modelBuilder);
 
             return modelBuilder;
@@ -71,7 +72,17 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
 
         private static void ValidationEmail(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<EmailModel>()
+                           .Property(p => p.NameClient)
+                           .IsRequired();
 
+            modelBuilder.Entity<EmailModel>()
+                          .Property(p => p.PhoneClient)
+                          .IsRequired();
+
+            modelBuilder.Entity<EmailModel>()
+                .Property(p => p.DescriptionClient)
+                .IsRequired();
         }
         #endregion[OnModelCreating]
 

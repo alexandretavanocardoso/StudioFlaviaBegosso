@@ -396,6 +396,40 @@ namespace studioFlaviaBegosso.Infra.Migrations
                     b.ToTable("Works");
                 });
 
+            modelBuilder.Entity("studioFlaviaBegosso.Domain.Model.EmailModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<DateTime?>("DateCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DescriptionClient")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EditBy")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<int>("NameClient")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PhoneClient")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Emails");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)

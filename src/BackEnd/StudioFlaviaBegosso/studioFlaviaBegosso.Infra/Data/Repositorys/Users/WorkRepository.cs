@@ -1,16 +1,21 @@
 ﻿using studioFlaviaBegosso.Domain.Interface.Repository.Users;
-using StudioFlaviaBegosso.Domain.Interface.Repository;
+using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
 {
-    public class WorkRepository : IWorkRepository
+    public class WorkRepository : BaseRepository<WorkModel>, IWorkRepository
     {
-        private StudioFlaviaBegossoContext _studioFlaviaBegossoContext;
+        public WorkRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
-        public WorkRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext)
+        public async Task<List<WorkModel>> GetAllWork()
         {
-            _studioFlaviaBegossoContext = studioFlaviaBegossoContext;
+            return await SelectListAsync();
+        }
+
+        public async Task<WorkModel> GetWork(Guid id)
+        {
+            return await SelectAsync(id);
         }
     }
 }

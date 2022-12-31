@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Users;
@@ -14,15 +15,11 @@ public class GalleryController : ControllerBase
         _galleryService = galleryService;
     }
 
-    [HttpGet("get-all-gallery")]
-    public IEnumerable<string> getAllGallery()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    [HttpGet("get-all")]
+    public async Task<ActionResult<List<GalleryDto>>> getAllGallery()
+        => await _galleryService.GetAllGalleryAsync();
 
-    [HttpGet("get-gallery/{id:Guid}")]
-    public string GetGallery(Guid id)
-    {
-        return "value";
-    }
+    [HttpGet("get/{id:Guid}")]
+    public async Task<ActionResult<GalleryDto>> GetGallery(Guid id)
+        => await _galleryService.GetGalleryAsync(id);
 }

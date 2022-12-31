@@ -1,16 +1,21 @@
 ﻿using studioFlaviaBegosso.Domain.Interface.Repository.Users;
-using StudioFlaviaBegosso.Domain.Interface.Repository;
+using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
 {
-    public class QuestionFrequentRepository : IQuestionFrequentRepository
+    public class QuestionFrequentRepository : BaseRepository<QuestionFrequentModel>, IQuestionFrequentRepository
     {
-        private StudioFlaviaBegossoContext _studioFlaviaBegossoContext;
+        public QuestionFrequentRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
-        public QuestionFrequentRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext)
+        public async Task<List<QuestionFrequentModel>> GetAllQuestionFrequent()
         {
-            _studioFlaviaBegossoContext = studioFlaviaBegossoContext;
+            return await SelectListAsync();
+        }
+
+        public async Task<QuestionFrequentModel> GetQuestionFrequent(Guid id)
+        {
+            return await SelectAsync(id);
         }
     }
 }

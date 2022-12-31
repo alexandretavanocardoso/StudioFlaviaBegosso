@@ -1,15 +1,20 @@
 ﻿using studioFlaviaBegosso.Domain.Interface.Repository.Users;
-using StudioFlaviaBegosso.Domain.Interface.Repository;
+using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users;
 
-public class BlogRepository : IBlogRepository
+public class BlogRepository : BaseRepository<BlogModel>, IBlogRepository
 {
-    private StudioFlaviaBegossoContext _studioFlaviaBegossoContext;
+    public BlogRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
-    public BlogRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext)
+    public async Task<List<BlogModel>> GetAllBlogAsync()
     {
-        _studioFlaviaBegossoContext = studioFlaviaBegossoContext;
+        return await SelectListAsync();
+    }
+
+    public async Task<BlogModel> GetBlogAsync(Guid id)
+    {
+        return await SelectAsync(id);
     }
 }

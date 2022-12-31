@@ -47,6 +47,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Aspose.Email": {
+              "target": "Package",
+              "version": "[22.11.0, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.0, )"

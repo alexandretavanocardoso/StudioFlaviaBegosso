@@ -1,3 +1,8 @@
-﻿namespace studioFlaviaBegosso.Domain.Interface.Service.Users;
+﻿using studioFlaviaBegosso.Domain.Dto;
 
-public interface IQuestionFrequentService { }
+namespace studioFlaviaBegosso.Domain.Interface.Service.Users;
+
+public interface IQuestionFrequentService {
+    Task<List<QuestionFrequentDto>> GetAllQuestionFrequentAsync();
+    Task<QuestionFrequentDto> GetQuestionFrequentAsync(Guid id);
+}

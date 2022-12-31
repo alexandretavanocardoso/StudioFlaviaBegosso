@@ -1,16 +1,21 @@
 ﻿using studioFlaviaBegosso.Domain.Interface.Repository.Users;
-using StudioFlaviaBegosso.Domain.Interface.Repository;
+using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
 {
-    public class GalleryRepository : IGalleryRepository
+    public class GalleryRepository : BaseRepository<GalleryModel>, IGalleryRepository
     {
-        private StudioFlaviaBegossoContext _studioFlaviaBegossoContext;
+        public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
-        public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext)
+        public async Task<List<GalleryModel>> GetAllGallery()
         {
-            _studioFlaviaBegossoContext = studioFlaviaBegossoContext;
+            return await SelectListAsync();
+        }
+
+        public async Task<GalleryModel> GetGallery(Guid id)
+        {
+            return await SelectAsync(id);
         }
     }
 }

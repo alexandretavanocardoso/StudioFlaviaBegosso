@@ -79,3 +79,4 @@ C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\Studio
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\obj\Debug\net6.0\studioFlaviaBegosso.Business.pdb
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\obj\Debug\net6.0\studioFlaviaBegosso.Business.genruntimeconfig.cache
 C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\obj\Debug\net6.0\ref\studioFlaviaBegosso.Business.dll
+C:\Users\tavan\OneDrive\Área de Trabalho\studioFlaviaBegosso\src\BackEnd\StudioFlaviaBegosso\studioFlaviaBegosso.Business\bin\Debug\net6.0\Aspose.Email.dll

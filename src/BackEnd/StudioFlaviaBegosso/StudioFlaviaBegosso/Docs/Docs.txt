@@ -1,10 +1,11 @@
-﻿AREA ADMIN
+﻿AREA ADMIN:
+- Arrumar upload de imagem
 
 
-AREA USER
+AREA USER: OK
 
-
-EMAIL: Ver video
-
+EMAIL
+- Colocar valores das variaveis de ambientes certas (appSettings)
+- Testar Envio
 
 AREA AUTHENTICATION: OK

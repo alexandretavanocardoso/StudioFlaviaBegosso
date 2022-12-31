@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Users;
@@ -14,15 +15,11 @@ public class QuestionFrequentController : ControllerBase
         _questionFrequentService = questionFrequentService;
     }
 
-    [HttpGet("get-all-question-frequent")]
-    public IEnumerable<string> getAllQuestionFrequent()
-    {
-        return new string[] { "value1", "value2" };
-    }
+    [HttpGet("get-all")]
+    public async Task<ActionResult<List<QuestionFrequentDto>>> GetAllQuestionFrequent()
+        => await _questionFrequentService.GetAllQuestionFrequentAsync();
 
-    [HttpGet("get-question-frequent/{id:Guid}")]
-    public string GetQuestionFrequent(Guid id)
-    {
-        return "value";
-    }
+    [HttpGet("get/{id:Guid}")]
+    public async Task<ActionResult<QuestionFrequentDto>> GetQuestionFrequent(Guid id)
+        => await _questionFrequentService.GetQuestionFrequentAsync(id);
 }

@@ -1,6 +1,10 @@
-﻿using studioFlaviaBegosso.Business.Services.Users;
+﻿using studioFlaviaBegosso.Business.Services.Email;
+using studioFlaviaBegosso.Business.Services.Users;
+using studioFlaviaBegosso.Domain.Interface.Repository.Email;
 using studioFlaviaBegosso.Domain.Interface.Repository.Users;
+using studioFlaviaBegosso.Domain.Interface.Service.Email;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
+using studioFlaviaBegosso.Infra.Data.Repositorys.Email;
 using studioFlaviaBegosso.Infra.Data.Repositorys.Users;
 using StudioFlaviaBegosso.Business.Services.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
@@ -23,6 +27,10 @@ namespace StudioFlaviaBegosso.Extension
             services.AddScoped<ITokenService, TokenService>();
             #endregion[Authentication]
 
+            #region[Email]
+            services.AddScoped<IEmailService, EmailService>();
+            #endregion[Email]
+
             #region[Users]
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<IGalleryService, GalleryService>();
@@ -39,6 +47,10 @@ namespace StudioFlaviaBegosso.Extension
             services.AddScoped<Domain.Interface.Repository.Adm.IQuestionFrequentRepository, Infra.Data.Repositorys.Adm.QuestionFrequentRepository>();
             services.AddScoped<Domain.Interface.Repository.Adm.IWorkRepository, Infra.Data.Repositorys.Adm.WorkRepository>();
             #endregion[Adm]
+
+            #region[Email]
+            services.AddScoped<IEmailRepository, EmailRepository>();
+            #endregion[Email]
 
             #region[Users]
             services.AddScoped<IBlogRepository, BlogRepository>();

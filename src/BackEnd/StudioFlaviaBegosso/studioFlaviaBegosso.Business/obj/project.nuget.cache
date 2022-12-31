@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TGDVPAlVJmIdtsTiJ3laffGvRnUGAjQZ7KPNPGPSO+0vJGdUq8p8SNXXQWmI5IKe327WrprbTwF9e3g4ll1HCg==",
+  "dgSpecHash": "h/4ub5bAX7gDwQIYvshMup4iaa7oHf65PMDk5M72f7kfA/5+wlZy1BDC6ybT4I4lJJZIhfzLmwD0Q0131HiEDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tavan\\OneDrive\\Área de Trabalho\\studioFlaviaBegosso\\src\\BackEnd\\StudioFlaviaBegosso\\studioFlaviaBegosso.Business\\studioFlaviaBegosso.Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tavan\\.nuget\\packages\\aspose.email\\22.11.0\\aspose.email.22.11.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\tavan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
+    "C:\\Users\\tavan\\.nuget\\packages\\system.security.cryptography.pkcs\\5.0.1\\system.security.cryptography.pkcs.5.0.1.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
     "C:\\Users\\tavan\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
