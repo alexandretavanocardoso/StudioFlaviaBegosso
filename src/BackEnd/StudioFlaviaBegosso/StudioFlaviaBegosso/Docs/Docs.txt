@@ -18,11 +18,17 @@ ENTITY MODEL
 REFATORAR
 refatorar metodos (dar uma geral): OK
 
-MIGRATION
-- Executar migrations:
-
 MODELS/DTOs
-Ver ser todos Models/Dtos estão com os dados necessarios: 
+Ver ser todos Models/Dtos estão com os dados necessarios: OK
+
+MIGRATION
+- Executar migrations: OK
+
+FAZER ENVIROMENTS
+DEV: OK
+PRD
+
+ARRUMAR POSTMAN:
 
 =========================================== FRONT ===========================================
 

@@ -81,6 +81,10 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
                           .IsRequired();
 
             modelBuilder.Entity<EmailModel>()
+                          .Property(p => p.SubjectClient)
+                          .IsRequired();
+
+            modelBuilder.Entity<EmailModel>()
                 .Property(p => p.DescriptionClient)
                 .IsRequired();
         }
