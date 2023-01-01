@@ -42,7 +42,5 @@ public class QuestionFrequentService : IQuestionFrequentService
     }
 
     public async Task<bool> DeleteQuestionFrequentAsync(Guid id)
-    {
-        return await _questionFrequentRepository.DeleteQuestionFrequent(id);
-    }
+        => await _questionFrequentRepository.DeleteQuestionFrequent(id);
 }

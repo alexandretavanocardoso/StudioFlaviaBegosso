@@ -3,6 +3,7 @@ using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Repository.Adm;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 using StudioFlaviaBegosso.Domain.Model;
+using System.Text.RegularExpressions;
 
 namespace StudioFlaviaBegosso.Business.Services.Adm;
 
@@ -31,18 +32,29 @@ public class BlogService : IBlogService
 
     public async Task<bool> InsertBlogAsync(BlogDto blogRequet)
     {
+        blogRequet.Image = ConvertStringToArrayByte(blogRequet);
         BlogModel model = _mapper.Map<BlogModel>(blogRequet);
         return await _blogRepository.InsertBlogAsync(model);
     }
 
     public async Task<bool> UpdateBlogAsync(Guid id, BlogDto blogRequet)
     {
+        blogRequet.Image = ConvertStringToArrayByte(blogRequet);
         BlogModel model = _mapper.Map<BlogModel>(blogRequet);
         return await _blogRepository.UpdateBlogAsync(id, model);
     }
 
     public async Task<bool> DeleteBlogAsync(Guid id)
+        => await _blogRepository.DeleteBlogAsync(id);
+
+    #region[Privados]
+    private byte[] ConvertStringToArrayByte(BlogDto blogRequet)
     {
-        return await _blogRepository.DeleteBlogAsync(id);
+        Regex regex = new Regex(@"^[\w/\:.-]+;base64,");
+        string image = regex.Replace(blogRequet.ImageString, string.Empty);
+        blogRequet.Image = Convert.FromBase64String(image);
+
+        return blogRequet.Image;
     }
+    #endregion[Privados]
 }

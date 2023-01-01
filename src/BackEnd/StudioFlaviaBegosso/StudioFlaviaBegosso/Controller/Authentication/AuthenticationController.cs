@@ -6,7 +6,7 @@ using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
 namespace StudioFlaviaBegosso.EndPoints.Authentication
 {
     [Route("api/v1/[controller]")]
-    [ApiExplorerSettings(IgnoreApi = true)]
+    [ApiExplorerSettings(IgnoreApi = false)]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
@@ -23,8 +23,7 @@ namespace StudioFlaviaBegosso.EndPoints.Authentication
         public async Task<ActionResult<bool>> InsertUser([FromBody] AuthenticationDto authentication)
         {
             bool auth = await _authenticationService.InsertUserAsync(authentication, _userManager);
-            if (!auth)
-                return BadRequest("Autenticação invalida");
+            if (!auth) return BadRequest("Autenticação ínvalida");
 
             return Created("Sucesso!", true);
         }

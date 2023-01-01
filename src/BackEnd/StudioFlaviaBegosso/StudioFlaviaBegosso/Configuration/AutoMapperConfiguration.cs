@@ -10,11 +10,16 @@ namespace StudioFlaviaBegosso.Configuration
     {
         public AutoMapperConfiguration()
         {
-            CreateMap<BlogModel, BlogDto>().ReverseMap();
-            CreateMap<QuestionFrequentModel, QuestionFrequentDto>().ReverseMap();
-            CreateMap<WorkModel, WorkDto>().ReverseMap();
-            CreateMap<GalleryModel, GalleryDto>().ReverseMap();
-            CreateMap<EmailModel, EmailDto>().ReverseMap();
+            CreateMap<BlogModel, BlogDto>()
+                .ReverseMap();
+            CreateMap<QuestionFrequentModel, QuestionFrequentDto>()
+                .ReverseMap();
+            CreateMap<WorkModel, WorkDto>()
+                .ReverseMap();
+            CreateMap<GalleryModel, GalleryDto>()
+                .ReverseMap();
+            CreateMap<EmailModel, EmailDto>()
+                .ReverseMap();
         }
     }
 }

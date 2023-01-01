@@ -102,8 +102,6 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys
         }
 
         public async Task<bool> ExistAsync(Guid id)
-        {
-            return await _dbSet.AnyAsync(p => p.Id.Equals(id));
-        }
+            => await _dbSet.AnyAsync(p => p.Id.Equals(id));
     }
 }

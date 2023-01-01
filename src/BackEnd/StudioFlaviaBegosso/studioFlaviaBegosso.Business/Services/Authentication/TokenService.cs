@@ -18,11 +18,9 @@ public class TokenService : ITokenService
     public async Task<string> GenerateTokenAsync(AuthenticationDto authentication, UserManager<IdentityUser> userManager)
     {
         IdentityUser user = await userManager.FindByEmailAsync(authentication.Email);
-        if (user == null)
-            return string.Empty;
+        if (user == null) return string.Empty;
 
-        if (!userManager.CheckPasswordAsync(user, authentication.Password).Result) 
-            return string.Empty;
+        if (!userManager.CheckPasswordAsync(user, authentication.Password).Result) return string.Empty;
 
         return GerarToken(user, authentication, userManager);
     }

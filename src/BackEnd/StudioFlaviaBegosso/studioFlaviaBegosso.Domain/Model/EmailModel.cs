@@ -3,7 +3,8 @@
 namespace studioFlaviaBegosso.Domain.Model;
 public class EmailModel : EntityModel
 {
-    public int NameClient { get; set; }
-    public int PhoneClient { get; set; }
-    public int DescriptionClient { get; set; }
+    public string? NameClient { get; set; }
+    public string? PhoneClient { get; set; }
+    public string? DescriptionClient { get; set; }
+    public DateTime? DateSendUser { get; set; } = DateTime.Now;
 }

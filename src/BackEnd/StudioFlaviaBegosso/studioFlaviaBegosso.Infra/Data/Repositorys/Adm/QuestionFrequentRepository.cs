@@ -10,18 +10,16 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
         public QuestionFrequentRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
         public async Task<List<QuestionFrequentModel>> GetAllQuestionFrequent()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<QuestionFrequentModel> GetQuestionFrequent(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
 
         public async Task<bool> InsertQuestionFrequent(QuestionFrequentModel questionFrequent)
         {
-            var result = await InsertAsync(questionFrequent);
+            questionFrequent.DateCreation = DateTime.Now;
+            questionFrequent.CreatedBy = "Flávia Alessandra Begosso";
+            QuestionFrequentModel result = await InsertAsync(questionFrequent);
             if (result == null) return false;
 
             return true;
@@ -29,7 +27,9 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
 
         public async Task<bool> UpdateQuestionFrequent(Guid id, QuestionFrequentModel questionFrequent)
         {
-            var result = await UpdateAsync(id, questionFrequent);
+            questionFrequent.DateUpdate = DateTime.Now;
+            questionFrequent.EditBy = "Flávia Alessandra Begosso";
+            QuestionFrequentModel result = await UpdateAsync(id, questionFrequent);
             if (result == null) return false;
 
             return true;
@@ -37,7 +37,7 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
 
         public async Task<bool> DeleteQuestionFrequent(Guid id)
         {
-            var result = await DeleteAsync(id);
+            bool result = await DeleteAsync(id);
             if (!result) return false;
 
             return true;

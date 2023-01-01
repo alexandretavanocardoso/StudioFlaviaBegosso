@@ -9,13 +9,9 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
         public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
         public async Task<List<GalleryModel>> GetAllGallery()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<GalleryModel> GetGallery(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
     }
 }

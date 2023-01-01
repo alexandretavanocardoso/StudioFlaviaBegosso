@@ -26,7 +26,7 @@ namespace StudioFlaviaBegosso.EndPoints.Authentication
             if (string.IsNullOrEmpty(token))
                 return BadRequest("Autenticação invalida");
 
-            return Created("Token", "TOKEN: " + token);
+            return Created("Token", "TOKEN: Bearer "+token);
         }
     }
 }

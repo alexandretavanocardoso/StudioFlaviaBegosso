@@ -9,13 +9,9 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
         public QuestionFrequentRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
         public async Task<List<QuestionFrequentModel>> GetAllQuestionFrequent()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<QuestionFrequentModel> GetQuestionFrequent(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
     }
 }

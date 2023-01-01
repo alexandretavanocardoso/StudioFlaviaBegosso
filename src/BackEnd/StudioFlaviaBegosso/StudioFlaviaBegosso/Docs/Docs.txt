@@ -1,11 +1,37 @@
-﻿AREA ADMIN:
-- Arrumar upload de imagem
+﻿=========================================== BACK ===========================================
 
+AREA ADMIN:
+- Arrumar upload de imagem: OK
+- Arrumar get de imagem: OK
 
 AREA USER: OK
 
-EMAIL
-- Colocar valores das variaveis de ambientes certas (appSettings)
-- Testar Envio
+EMAIL: OK
 
 AREA AUTHENTICATION: OK
+
+ENTITY MODEL
+- TIrar valores da datas fixas: OK
+- no Insert colocar a DateCreation = DateTime.Now;: OK
+- no update colocar a DateUpdate = DateTime.Now;: OK
+
+REFATORAR
+refatorar metodos (dar uma geral): OK
+
+MIGRATION
+- Executar migrations:
+
+MODELS/DTOs
+Ver ser todos Models/Dtos estão com os dados necessarios: 
+
+=========================================== FRONT ===========================================
+
+AREA ADMIN:
+- Concatenar no front "data:image/png;base64," + image (upload de imagens)
+
+AREA USER:
+- Concatenar no front "data:image/png;base64," + image (upload de imagens)
+
+EMAIL:
+
+AREA AUTHENTICATION:

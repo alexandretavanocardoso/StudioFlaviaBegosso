@@ -9,18 +9,14 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Email
         public EmailRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
         public async Task<List<EmailModel>> GetAllEmail()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<EmailModel> GetEmail(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
 
         public async Task<bool> InsertEmail(EmailModel blog)
         {
-            var result = await InsertAsync(blog);
+            EmailModel result = await InsertAsync(blog);
             if (result == null) return false;
 
             return true;
@@ -28,7 +24,7 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Email
 
         public async Task<bool> DeleteEmail(Guid id)
         {
-            var result = await DeleteAsync(id);
+            bool result = await DeleteAsync(id);
             if (!result) return false;
 
             return true;

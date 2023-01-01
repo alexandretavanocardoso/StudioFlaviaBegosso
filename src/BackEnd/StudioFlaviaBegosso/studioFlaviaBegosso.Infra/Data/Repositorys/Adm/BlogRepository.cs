@@ -10,18 +10,16 @@ public class BlogRepository : BaseRepository<BlogModel>, IBlogRepository
     public BlogRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
     public async Task<List<BlogModel>> GetAllBlogAsync()
-    {
-        return await SelectListAsync();
-    }
+        => await SelectListAsync();
 
     public async Task<BlogModel> GetBlogAsync(Guid id)
-    {
-        return await SelectAsync(id);
-    }
+        => await SelectAsync(id);
 
     public async Task<bool> InsertBlogAsync(BlogModel blog)
     {
-        var result = await InsertAsync(blog);
+        blog.DateCreation = DateTime.Now;
+        blog.CreatedBy = "Flávia Alessandra Begosso";
+        BlogModel result = await InsertAsync(blog);
         if (result == null) return false;
         
         return true;
@@ -29,7 +27,9 @@ public class BlogRepository : BaseRepository<BlogModel>, IBlogRepository
 
     public async Task<bool> UpdateBlogAsync(Guid id, BlogModel blog)
     {
-        var result = await UpdateAsync(id, blog);
+        blog.DateUpdate = DateTime.Now;
+        blog.EditBy = "Flávia Alessandra Begosso";
+        BlogModel result = await UpdateAsync(id, blog);
         if (result == null) return false;
 
         return true;
@@ -37,7 +37,7 @@ public class BlogRepository : BaseRepository<BlogModel>, IBlogRepository
 
     public async Task<bool> DeleteBlogAsync(Guid id)
     {
-        var result = await DeleteAsync(id);
+        bool result = await DeleteAsync(id);
         if (!result) return false;
 
         return true;

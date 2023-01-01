@@ -9,13 +9,9 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Users
         public WorkRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) { }
 
         public async Task<List<WorkModel>> GetAllWork()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<WorkModel> GetWork(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
     }
 }

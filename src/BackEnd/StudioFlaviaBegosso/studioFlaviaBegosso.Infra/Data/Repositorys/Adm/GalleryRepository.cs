@@ -10,18 +10,16 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
         public GalleryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
         public async Task<List<GalleryModel>> GetAllGallery()
-        {
-            return await SelectListAsync();
-        }
+            => await SelectListAsync();
 
         public async Task<GalleryModel> GetGallery(Guid id)
-        {
-            return await SelectAsync(id);
-        }
+            => await SelectAsync(id);
 
         public async Task<bool> InsertGallery(GalleryModel gallery)
         {
-            var result = await InsertAsync(gallery);
+            gallery.DateCreation = DateTime.Now;
+            gallery.CreatedBy = "Flávia Alessandra Begosso";
+            GalleryModel result = await InsertAsync(gallery);
             if (result == null) return false;
 
             return true;
@@ -29,7 +27,9 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
 
         public async Task<bool> UpdateGallery(Guid id, GalleryModel gallery)
         {
-            var result = await UpdateAsync(id, gallery);
+            gallery.DateUpdate = DateTime.Now;
+            gallery.EditBy = "Flávia Alessandra Begosso";
+            GalleryModel result = await UpdateAsync(id, gallery);
             if (result == null) return false;
 
             return true;
@@ -37,7 +37,7 @@ namespace StudioFlaviaBegosso.Infra.Data.Repositorys.Adm
 
         public async Task<bool> DeleteGallery(Guid id)
         {
-            var result = await DeleteAsync(id);
+            bool result = await DeleteAsync(id);
             if (!result) return false;
 
             return true;

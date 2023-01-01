@@ -2,8 +2,9 @@
 
 public class EmailDto
 {
-    public Guid Id { get; set; }
-    public int NameClient { get; set; }
-    public int PhoneClient { get; set; }
-    public int DescriptionClient { get; set; }
+    public Guid? Id { get; set; }
+    public string? NameClient { get; set; }
+    public string? PhoneClient { get; set; }
+    public string? DescriptionClient { get; set; }
+    public DateTime? DateSendUser { get; set; }
 }
