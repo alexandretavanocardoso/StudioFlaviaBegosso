@@ -10,6 +10,25 @@ EMAIL: OK
 
 AREA AUTHENTICATION: OK
 
+CADASTRO DE CLIENTES: (Fazer) (Funcionalidade alone)
+- Criar Arquivos: - testar
+
+CADASTRO DE PROCEDIMENTOS: (Fazer) (Funcionalidade alone)
+- Criar Arquivos: - testar
+
+CADASTRO DE MANUTENCOES ESCOLHIDAS: (Fazer) (Funcionalidade alone)
+- Criar Arquivos: - testar
+
+CADASTRO DE MANUTENCOES (1,2,3): (Fazer) (Funcionalidade alone)
+- Criar Arquivos: - testar
+
+MIGRATION PARA TABELAS ACIMA
+- Executar migrations: 
+
+AGENDAMENTO DE CLIENTES: (Fazer): FALTA AJUSTAR FKS DAS MODELS
+- Tabela inicial
+- Tabela de historico (1,2,3) manutenção
+
 ENTITY MODEL
 - TIrar valores da datas fixas: OK
 - no Insert colocar a DateCreation = DateTime.Now;: OK
@@ -21,12 +40,15 @@ refatorar metodos (dar uma geral): OK
 MODELS/DTOs
 Ver ser todos Models/Dtos estão com os dados necessarios: OK
 
-MIGRATION
-- Executar migrations: OK
+LOGS: 
 
-FAZER ENVIROMENTS
+BRANCHS OK
+- develop:
+- master (PRD):
+
+FAZER ENVIROMENTS (OK)
 DEV:
-PRD
+PRD:
 
 ARRUMAR POSTMAN:
 
@@ -38,6 +60,10 @@ AREA ADMIN:
 AREA USER:
 - Concatenar no front "data:image/png;base64," + image (upload de imagens)
 
+AGENDAMENTO CLIENTES: (Fazer)
+
 EMAIL:
 
 AREA AUTHENTICATION:
+
+TELAS PARA CADASTRAR (Funcionalidade alone)

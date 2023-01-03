@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using studioFlaviaBegosso.Domain.Model;
+using studioFlaviaBegosso.Domain.Model.Adm;
 using StudioFlaviaBegosso.Domain.Model;
 
 namespace StudioFlaviaBegosso.Domain.ValidationEntity
@@ -14,6 +15,12 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
             ValidationGallery(modelBuilder);
             ValidationQuestionFrequent(modelBuilder);
             ValidationEmail(modelBuilder);
+            ValidationClient(modelBuilder);
+            ValidationMaintenance(modelBuilder);
+            ValidationMaintenanceChoose(modelBuilder);
+            ValidationProcedure(modelBuilder);
+            ValidationScheduleClient(modelBuilder);
+            ValidationScheduleClientHistory(modelBuilder);
 
             return modelBuilder;
         }
@@ -87,6 +94,52 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
             modelBuilder.Entity<EmailModel>()
                 .Property(p => p.DescriptionClient)
                 .IsRequired();
+        }
+
+        private static void ValidationClient(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ClientModel>()
+                          .Property(p => p.NameFull)
+                          .IsRequired();
+
+            modelBuilder.Entity<ClientModel>()
+               .Property(p => p.City)
+               .IsRequired();
+
+            modelBuilder.Entity<ClientModel>()
+                .Property(p => p.Age)
+                .IsRequired();
+        }
+
+        private static void ValidationMaintenance(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MaintenanceModel>()
+                         .Property(p => p.Name)
+                         .IsRequired();
+        }
+
+        private static void ValidationMaintenanceChoose(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MaintenanceChooseModel>()
+                         .Property(p => p.Name)
+                         .IsRequired();
+        }
+
+        private static void ValidationProcedure(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProcedureModel>()
+                          .Property(p => p.Name)
+                          .IsRequired();
+        }
+
+        private static void ValidationScheduleClient(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ScheduleClientModel>();
+        }
+
+        private static void ValidationScheduleClientHistory(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ScheduleClientHistoryModel>();
         }
         #endregion[OnModelCreating]
 

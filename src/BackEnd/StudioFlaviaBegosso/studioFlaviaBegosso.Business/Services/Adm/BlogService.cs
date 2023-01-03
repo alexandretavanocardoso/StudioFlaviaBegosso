@@ -20,13 +20,13 @@ public class BlogService : IBlogService
 
     public async Task<List<BlogDto>> GetAllBlogAsync()
     {
-        List<BlogModel> blogModel = await _blogRepository.GetAllBlogAsync();
+        List<BlogModel> blogModel = await _blogRepository.GetAllBlog();
         return _mapper.Map<List<BlogDto>>(blogModel);
     }
 
     public async Task<BlogDto> GetBlogAsync(Guid id)
     {
-        BlogModel blogModel = await _blogRepository.GetBlogAsync(id);
+        BlogModel blogModel = await _blogRepository.GetBlog(id);
         return _mapper.Map<BlogDto>(blogModel);
     }
 
@@ -34,18 +34,18 @@ public class BlogService : IBlogService
     {
         blogRequet.Image = ConvertStringToArrayByte(blogRequet);
         BlogModel model = _mapper.Map<BlogModel>(blogRequet);
-        return await _blogRepository.InsertBlogAsync(model);
+        return await _blogRepository.InsertBlog(model);
     }
 
     public async Task<bool> UpdateBlogAsync(Guid id, BlogDto blogRequet)
     {
         blogRequet.Image = ConvertStringToArrayByte(blogRequet);
         BlogModel model = _mapper.Map<BlogModel>(blogRequet);
-        return await _blogRepository.UpdateBlogAsync(id, model);
+        return await _blogRepository.UpdateBlog(id, model);
     }
 
     public async Task<bool> DeleteBlogAsync(Guid id)
-        => await _blogRepository.DeleteBlogAsync(id);
+        => await _blogRepository.DeleteBlog(id);
 
     #region[Privados]
     private byte[] ConvertStringToArrayByte(BlogDto blogRequet)
