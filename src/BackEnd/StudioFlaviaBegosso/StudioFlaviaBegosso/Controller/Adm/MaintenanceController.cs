@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using studioFlaviaBegosso.Domain.Dto.Adm;
+﻿using studioFlaviaBegosso.Domain.Dto.Adm;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Adm;

@@ -1,11 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using studioFlaviaBegosso.Domain.Dto.Authentication;
+﻿using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace StudioFlaviaBegosso.Business.Services.Authentication;
 

@@ -1,6 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
-
-namespace StudioFlaviaBegosso.Configuration
+﻿namespace StudioFlaviaBegosso.Configuration
 {
     public static class SwaggerConfiguration
     {

@@ -1,8 +1,6 @@
 ﻿=========================================== BACK ===========================================
 
-AREA ADMIN:
-- Arrumar upload de imagem: OK
-- Arrumar get de imagem: OK
+AREA ADMIN: OK
 
 AREA USER: OK
 
@@ -11,23 +9,21 @@ EMAIL: OK
 AREA AUTHENTICATION: OK
 
 CADASTRO DE CLIENTES: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - OK
+- Criar Arquivos: - testar
 
 CADASTRO DE PROCEDIMENTOS: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - OK
+- Criar Arquivos: - testar
 
 CADASTRO DE MANUTENCOES ESCOLHIDAS: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - OK
+- Criar Arquivos: - testar
 
 CADASTRO DE MANUTENCOES (1,2,3): (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - OK
+- Criar Arquivos: - testar
 
 MIGRATION PARA TABELAS ACIMA
 - Executar migrations: OK
 
 AGENDAMENTO DE CLIENTES: (Fazer)
-- Tabela inicial: OK
-- Tabela de historico (1,2,3) manutenção: OK
 SCHEDULE
 - Get: - testar
 - Post: - testar

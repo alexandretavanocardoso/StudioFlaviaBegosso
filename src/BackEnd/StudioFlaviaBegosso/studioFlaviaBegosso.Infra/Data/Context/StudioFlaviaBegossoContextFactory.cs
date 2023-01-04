@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using StudioFlaviaBegosso.Infra.Data.Context;
+﻿using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Context;
 

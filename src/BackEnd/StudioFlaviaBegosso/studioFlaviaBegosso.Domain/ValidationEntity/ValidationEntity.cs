@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using studioFlaviaBegosso.Domain.Model;
+﻿using studioFlaviaBegosso.Domain.Model;
 using studioFlaviaBegosso.Domain.Model.Adm;
 using StudioFlaviaBegosso.Domain.Model;
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -7,6 +7,17 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<Using Include="AutoMapper"/>
+		<Using Include="System.Text.RegularExpressions"/>
+		<Using Include="System.Security.Claims"/>
+		<Using Include="System.IdentityModel.Tokens.Jwt"/>
+		<Using Include="System.Text"/>
+		<Using Include="Microsoft.AspNetCore.Identity"/>
+		<Using Include="Microsoft.Extensions.Configuration"/>
+		<Using Include="Microsoft.IdentityModel.Tokens"/>
+	</ItemGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="Aspose.Email" Version="22.11.0" />
 		<PackageReference Include="AutoMapper" Version="12.0.0" />

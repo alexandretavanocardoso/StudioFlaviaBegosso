@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using studioFlaviaBegosso.Domain.Dto.Authentication;
+﻿using studioFlaviaBegosso.Domain.Dto.Authentication;
 
 namespace StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
 

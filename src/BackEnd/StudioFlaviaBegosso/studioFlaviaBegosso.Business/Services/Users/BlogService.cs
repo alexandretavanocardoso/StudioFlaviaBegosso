@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using studioFlaviaBegosso.Domain.Dto;
+﻿using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Interface.Repository.Users;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
 using StudioFlaviaBegosso.Domain.Model;

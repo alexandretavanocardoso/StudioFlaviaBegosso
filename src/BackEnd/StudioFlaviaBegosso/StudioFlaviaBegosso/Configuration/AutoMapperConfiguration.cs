@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using studioFlaviaBegosso.Domain.Dto;
+﻿using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Dto.Adm;
 using studioFlaviaBegosso.Domain.Dto.Email;
 using studioFlaviaBegosso.Domain.Model;

@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using StudioFlaviaBegosso.Domain.Model;
+﻿using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
 namespace studioFlaviaBegosso.Infra.Data.Repositorys

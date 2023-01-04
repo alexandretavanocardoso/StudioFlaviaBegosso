@@ -1,9 +1,7 @@
-﻿using AutoMapper;
-using studioFlaviaBegosso.Domain.Dto;
+﻿using studioFlaviaBegosso.Domain.Dto;
 using StudioFlaviaBegosso.Domain.Interface.Repository.Adm;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 using StudioFlaviaBegosso.Domain.Model;
-using System.Text.RegularExpressions;
 
 namespace StudioFlaviaBegosso.Business.Services.Adm;
 

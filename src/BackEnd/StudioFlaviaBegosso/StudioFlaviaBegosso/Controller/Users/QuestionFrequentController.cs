@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using studioFlaviaBegosso.Domain.Dto;
+﻿using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
 
 namespace StudioFlaviaBegosso.API.EndPoints.Users;

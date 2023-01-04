@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using studioFlaviaBegosso.Domain.Dto.Email;
+﻿using studioFlaviaBegosso.Domain.Dto.Email;
 using studioFlaviaBegosso.Domain.Interface.Service.Email;
 
 namespace StudioFlaviaBegosso.EndPoints.Authentication

@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using studioFlaviaBegosso.Domain.Model;
+﻿using studioFlaviaBegosso.Domain.Model;
 using studioFlaviaBegosso.Domain.Model.Adm;
 using StudioFlaviaBegosso.Domain.Model;
 using StudioFlaviaBegosso.Domain.ValidationEntity;

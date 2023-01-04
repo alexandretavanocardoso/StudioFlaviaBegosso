@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using studioFlaviaBegosso.Domain.Dto.Authentication;
+﻿using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
 
 namespace StudioFlaviaBegosso.EndPoints.Authentication
@@ -11,11 +9,15 @@ namespace StudioFlaviaBegosso.EndPoints.Authentication
     public class TokenController : ControllerBase
     {
         private readonly ITokenService _tokenService;
+        private readonly ILogger<AuthenticationDto> _logger;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public TokenController(ITokenService tokenService, UserManager<IdentityUser> userManager)
+        public TokenController(ITokenService tokenService, 
+                               ILogger<AuthenticationDto> logger,
+                               UserManager<IdentityUser> userManager)
         {
             _tokenService = tokenService;
+            _logger = logger;
             _userManager = userManager;
         }
 
@@ -24,7 +26,10 @@ namespace StudioFlaviaBegosso.EndPoints.Authentication
         {
             string token = await _tokenService.GenerateTokenAsync(authentication, _userManager);
             if (string.IsNullOrEmpty(token))
-                return BadRequest("Autenticação invalida");
+            {
+                _logger.LogError("Token inválido. Method: generate-token");
+                return BadRequest("Autenticação inválida");
+            }
 
             return Created("Token", "TOKEN: Bearer "+token);
         }

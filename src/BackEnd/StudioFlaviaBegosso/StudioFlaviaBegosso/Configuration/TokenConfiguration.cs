@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-
-namespace StudioFlaviaBegosso.Configuration
+﻿namespace StudioFlaviaBegosso.Configuration
 {
     public static class TokenConfiguration
     {
