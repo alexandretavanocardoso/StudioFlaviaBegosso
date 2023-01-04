@@ -11,6 +11,12 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Adm
 
         }
 
+        public async Task<List<ScheduleClientModel>> GetAllScheduleClient()
+            => await SelectListAsync();
+
+        public async Task<ScheduleClientModel> GetScheduleClient(Guid id)
+            => await SelectAsync(id);
+
         public async Task<bool> InsertMarkSchedule(ScheduleClientModel schedule)
         {
             schedule.DateCreation = DateTime.Now;
@@ -27,6 +33,14 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Adm
             schedule.EditBy = "Flávia Alessandra Begosso";
             ScheduleClientModel result = await UpdateAsync(id, schedule);
             if (result == null) return false;
+
+            return true;
+        }
+
+        public async Task<bool> DeleteMarkSchedule(Guid id)
+        {
+            bool result = await DeleteAsync(id);
+            if (!result) return false;
 
             return true;
         }

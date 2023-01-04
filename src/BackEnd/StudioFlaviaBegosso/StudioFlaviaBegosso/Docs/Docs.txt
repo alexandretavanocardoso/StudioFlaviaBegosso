@@ -11,23 +11,34 @@ EMAIL: OK
 AREA AUTHENTICATION: OK
 
 CADASTRO DE CLIENTES: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - testar
+- Criar Arquivos: - OK
 
 CADASTRO DE PROCEDIMENTOS: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - testar
+- Criar Arquivos: - OK
 
 CADASTRO DE MANUTENCOES ESCOLHIDAS: (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - testar
+- Criar Arquivos: - OK
 
 CADASTRO DE MANUTENCOES (1,2,3): (Fazer) (Funcionalidade alone)
-- Criar Arquivos: - testar
+- Criar Arquivos: - OK
 
 MIGRATION PARA TABELAS ACIMA
-- Executar migrations: 
+- Executar migrations: OK
 
-AGENDAMENTO DE CLIENTES: (Fazer): FALTA AJUSTAR FKS DAS MODELS
-- Tabela inicial
-- Tabela de historico (1,2,3) manutenção
+AGENDAMENTO DE CLIENTES: (Fazer)
+- Tabela inicial: OK
+- Tabela de historico (1,2,3) manutenção: OK
+SCHEDULE
+- Get: - testar
+- Post: - testar
+- Update: - testar 
+- delete: - testar
+
+SCHEDULE HISTORY
+- Get: - testar
+- Post: - testar
+- Update: - testar
+- delete: - testar
 
 ENTITY MODEL
 - TIrar valores da datas fixas: OK
@@ -42,12 +53,12 @@ Ver ser todos Models/Dtos estão com os dados necessarios: OK
 
 LOGS: 
 
-BRANCHS OK
-- develop:
+BRANCHS
+- develop: OK
 - master (PRD):
 
 FAZER ENVIROMENTS (OK)
-DEV:
+DEV: OK
 PRD:
 
 ARRUMAR POSTMAN:

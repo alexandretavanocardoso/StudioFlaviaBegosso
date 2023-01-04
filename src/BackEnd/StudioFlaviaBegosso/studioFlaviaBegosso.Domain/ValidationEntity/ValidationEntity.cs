@@ -134,12 +134,48 @@ namespace StudioFlaviaBegosso.Domain.ValidationEntity
 
         private static void ValidationScheduleClient(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ScheduleClientModel>();
+            modelBuilder.Entity<ClientModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Client)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.ClientId);
+
+            modelBuilder.Entity<ProcedureModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Procedure)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.ProcedureId);
+
+            modelBuilder.Entity<MaintenanceModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Maintenance)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.MaintenanceId);
+
+            modelBuilder.Entity<MaintenanceChooseModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.MaintenanceChoose)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.MaintenanceChooseId);
         }
 
         private static void ValidationScheduleClientHistory(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ScheduleClientHistoryModel>();
+            modelBuilder.Entity<ClientModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Client)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.ClientId);
+
+            modelBuilder.Entity<ProcedureModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Procedure)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.ProcedureId);
+
+            modelBuilder.Entity<MaintenanceModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.Maintenance)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.MaintenanceId);
+
+            modelBuilder.Entity<MaintenanceChooseModel>()
+              .HasOne(s => s.ScheduleClient)
+              .WithOne(ad => ad.MaintenanceChoose)
+              .HasForeignKey<ScheduleClientModel>(ad => ad.MaintenanceChooseId);
         }
         #endregion[OnModelCreating]
 

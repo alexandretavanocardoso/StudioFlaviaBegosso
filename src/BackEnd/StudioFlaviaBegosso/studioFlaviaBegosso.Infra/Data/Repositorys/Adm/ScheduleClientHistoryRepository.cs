@@ -8,6 +8,12 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Adm
     {
         public ScheduleClientHistoryRepository(StudioFlaviaBegossoContext studioFlaviaBegossoContext) : base(studioFlaviaBegossoContext) {}
 
+        public async Task<List<ScheduleClientHistoryModel>> GetAllScheduleHistoryClient()
+            => await SelectListAsync();
+
+        public async Task<ScheduleClientHistoryModel> GetScheduleHistoryClient(Guid id)
+            => await SelectAsync(id);
+
         public async Task<bool> InsertMarkScheduleHistory(ScheduleClientHistoryModel schedule, bool isUpdate, bool isInsert)
         {
             schedule.DateCreation = DateTime.Now;
@@ -16,6 +22,14 @@ namespace studioFlaviaBegosso.Infra.Data.Repositorys.Adm
             schedule.IsUpdate = isUpdate;
             ScheduleClientHistoryModel result = await InsertAsync(schedule);
             if (result == null) return false;
+
+            return true;
+        }
+
+        public async Task<bool> DeleteMarkScheduleHistory(Guid id)
+        {
+            bool result = await DeleteAsync(id);
+            if (!result) return false;
 
             return true;
         }

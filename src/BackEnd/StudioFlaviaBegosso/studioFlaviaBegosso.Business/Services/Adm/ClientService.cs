@@ -25,6 +25,7 @@ public class ClientService : IClientService
         _mapper = mapper;
     }
 
+    #region[Client]
     public async Task<List<ClientDto>> GetAllClientAsync()
     {
         List<ClientModel> model = await _clientRepository.GetAllClient();
@@ -41,6 +42,29 @@ public class ClientService : IClientService
     {
         ClientModel model = _mapper.Map<ClientModel>(client);
         return await _clientRepository.InsertClient(model);
+    }
+
+    public async Task<bool> UpdateClientAsync(Guid id, ClientDto client)
+    {
+        ClientModel model = _mapper.Map<ClientModel>(client);
+        return await _clientRepository.UpdateClient(id, model);
+    }
+
+    public async Task<bool> DeleteClientAsync(Guid id)
+        => await _clientRepository.DeleteClient(id);
+    #endregion[Client]
+
+    #region[Schedule]
+    public async Task<List<ScheduleClientDto>> GetAllScheduleClientAsync()
+    {
+        List<ScheduleClientModel> model = await _scheduleClientRepository.GetAllScheduleClient();
+        return _mapper.Map<List<ScheduleClientDto>>(model);
+    }
+
+    public async Task<ScheduleClientDto> GetScheduleClientAsync(Guid id)
+    {
+        ScheduleClientModel model = await _scheduleClientRepository.GetScheduleClient(id);
+        return _mapper.Map<ScheduleClientDto>(model);
     }
 
     public async Task<bool> MarkScheduleInsertAsync(ScheduleClientDto schedule)
@@ -65,14 +89,20 @@ public class ClientService : IClientService
         return true;
     }
 
-    public async Task<bool> UpdateClientAsync(Guid id, ClientDto client)
+    public async Task<bool> DeleteScheduleClientAsync(Guid id)
+        => await _scheduleClientRepository.DeleteMarkSchedule(id);
+    #endregion[Schedule]
+
+    #region[Schedule History]
+    public async Task<List<ScheduleClientHistoryDto>> GetAllScheduleHistoryClientAsync()
     {
-        ClientModel model = _mapper.Map<ClientModel>(client);
-        return await _clientRepository.UpdateClient(id, model);
+        List<ScheduleClientHistoryModel> model = await _scheduleClientHistoryRepository.GetAllScheduleHistoryClient();
+        return _mapper.Map<List<ScheduleClientHistoryDto>>(model);
     }
 
-    public async Task<bool> DeleteClientAsync(Guid id)
-        => await _clientRepository.DeleteClient(id);
+    public async Task<bool> DeleteScheduleHistoryClientAsync(Guid id)
+        => await _scheduleClientHistoryRepository.DeleteMarkScheduleHistory(id);
+    #endregion[Schedule History]
 
     #region[Privados]
     private async Task<bool> InsertMarkScheduleAsync(ScheduleClientDto schedule)
