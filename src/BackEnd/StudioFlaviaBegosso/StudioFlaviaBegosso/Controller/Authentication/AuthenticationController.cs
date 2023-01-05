@@ -1,7 +1,7 @@
 ﻿using studioFlaviaBegosso.Domain.Dto.Authentication;
 using StudioFlaviaBegosso.Domain.Interface.Service.Authentication;
 
-namespace StudioFlaviaBegosso.EndPoints.Authentication
+namespace StudioFlaviaBegosso.Authentication
 {
     [Route("api/v1/[controller]")]
     [ApiExplorerSettings(IgnoreApi = false)]

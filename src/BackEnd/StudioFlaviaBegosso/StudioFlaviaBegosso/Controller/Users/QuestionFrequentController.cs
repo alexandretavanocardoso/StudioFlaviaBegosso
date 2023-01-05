@@ -1,7 +1,7 @@
 ﻿using studioFlaviaBegosso.Domain.Dto;
 using studioFlaviaBegosso.Domain.Interface.Service.Users;
 
-namespace StudioFlaviaBegosso.API.EndPoints.Users;
+namespace StudioFlaviaBegosso.Users;
 
 [Route("api/v1/[controller]")]
 [ApiExplorerSettings(IgnoreApi = false)]

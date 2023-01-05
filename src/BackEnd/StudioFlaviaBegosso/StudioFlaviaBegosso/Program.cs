@@ -1,4 +1,3 @@
-using StudioFlaviaBegosso.API.Configuration;
 using StudioFlaviaBegosso.Configuration;
 using StudioFlaviaBegosso.Extension;
 

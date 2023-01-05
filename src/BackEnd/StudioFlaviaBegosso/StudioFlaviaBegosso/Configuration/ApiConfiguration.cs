@@ -1,7 +1,7 @@
 ﻿using StudioFlaviaBegosso.Configuration;
 using StudioFlaviaBegosso.Infra.Data.Context;
 
-namespace StudioFlaviaBegosso.API.Configuration
+namespace StudioFlaviaBegosso.Configuration
 {
     public static class ApiConfiguration
     {

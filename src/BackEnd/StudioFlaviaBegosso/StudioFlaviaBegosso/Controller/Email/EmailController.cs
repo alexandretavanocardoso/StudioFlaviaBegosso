@@ -1,7 +1,7 @@
 ﻿using studioFlaviaBegosso.Domain.Dto.Email;
 using studioFlaviaBegosso.Domain.Interface.Service.Email;
 
-namespace StudioFlaviaBegosso.EndPoints.Authentication
+namespace StudioFlaviaBegosso.Email
 {
     [Route("api/v1/email/[controller]")]
     [ApiExplorerSettings(IgnoreApi = false)]

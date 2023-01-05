@@ -1,7 +1,7 @@
 ﻿using studioFlaviaBegosso.Domain.Dto.Adm;
 using StudioFlaviaBegosso.Domain.Interface.Service.Adm;
 
-namespace StudioFlaviaBegosso.API.EndPoints.Adm;
+namespace StudioFlaviaBegosso.Adm;
 
 [Route("api/v1/adm/[controller]")]
 [ApiExplorerSettings(IgnoreApi = false)]
